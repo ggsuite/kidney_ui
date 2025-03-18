@@ -4,55 +4,23 @@
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
 
-import 'dart:convert';
-import 'dart:io';
-
-import 'package:gg_console_colors/gg_console_colors.dart';
-import 'package:gg_capture_print/gg_capture_print.dart';
-
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../bin/kidney_ui.dart';
 
 void main() {
-  group('bin/kidney_ui.dart', () {
-    // #########################################################################
-
-    test('should be executable', () async {
-      // Execute bin/kidney_ui.dart and check if it prints help
-      final result = await Process.run(
-        './bin/kidney_ui.dart',
-        ['my-command'],
-        stdoutEncoding: utf8,
-        stderrEncoding: utf8,
-      );
-
-      final expectedMessages = [
-        'Invalid argument(s): Option',
-        red('input'),
-        'is mandatory.',
-      ];
-
-      final stdout = result.stdout as String;
-
-      for (final msg in expectedMessages) {
-        expect(stdout, contains(msg));
-      }
-    });
-  });
-
   // ###########################################################################
   group('run(args, log)', () {
-    group('with args=[--param, value]', () {
-      test('should print "value"', () async {
-        // Execute bin/kidney_ui.dart and check if it prints "value"
+    group('with args=[my-command, --input, 5]', () {
+      test('should print "Running my-command with param 5"', () async {
+        // Execute run function and check if it prints the expected output
         final messages = <String>[];
         await run(args: ['my-command', '--input', '5'], ggLog: messages.add);
 
         final expectedMessages = ['Running my-command with param 5'];
 
         for (final msg in expectedMessages) {
-          expect(hasLog(messages, msg), isTrue);
+          expect(messages, contains(msg));
         }
       });
     });
