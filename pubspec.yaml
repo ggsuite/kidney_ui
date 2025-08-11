@@ -14,7 +14,7 @@ dependencies:
   gg_args: ^2.0.4
   gg_log: ^1.0.6
 dev_dependencies: 
-  flutter_lints: ^3.0.0
+  flutter_lints: ^6.0.0
   flutter_test: 
     sdk: flutter
   gg_capture_print: ^1.0.9
