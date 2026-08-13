@@ -3,21 +3,21 @@ version: 1.0.0
 description: Das Frontend der Kidney Suite. Eine Flutter App, die direkt mit dem Core von Kidney kommuniziert.
 repository: https://github.com/inlavigo/kidney_ui.git
 environment: 
-  sdk: '>=3.3.0 <4.0.0'
-  flutter: '>=3.19.0'
+  sdk: ">=3.13.0 <4.0.0"
+  flutter: ">=3.47.0"
 dependencies: 
   flutter: 
     sdk: flutter
   args: ^2.7.0
-  gg_console_colors: ^2.1.4
-  gg_process: ^1.1.6
-  gg_args: ^2.0.4
-  gg_log: ^1.0.6
+  gg_console_colors: ^2.3.1
+  gg_process: ^1.1.7
+  gg_args: ^3.0.1
+  gg_log: ^1.0.7
 dev_dependencies: 
   flutter_lints: ^6.0.0
   flutter_test: 
     sdk: flutter
-  gg_capture_print: ^1.0.9
-  test: ^1.25.8
+  gg_capture_print: ^1.0.10
+  test: ^1.31.1
 executables: 
   kidney_ui: 
