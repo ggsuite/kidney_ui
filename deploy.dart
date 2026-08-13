@@ -1,5 +1,5 @@
 // @license
-// Copyright (c) 2019 - 2025 Dr. Gabriel Gatzsche. All Rights Reserved.
+// Copyright (c) ggsuite
 //
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
@@ -11,11 +11,10 @@ import 'dart:io';
 void main(List<String> arguments) async {
   // Build the web application using Flutter's build command.
   print('Building web application...');
-  final buildResult = await Process.run(
-    'flutter',
-    ['build', 'web'],
-    runInShell: true,
-  );
+  final buildResult = await Process.run('flutter', [
+    'build',
+    'web',
+  ], runInShell: true);
 
   if (buildResult.exitCode != 0) {
     print('Error building web application:');

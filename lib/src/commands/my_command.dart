@@ -1,5 +1,5 @@
 // @license
-// Copyright (c) 2019 - 2025 Dr. Gabriel Gatzsche. All Rights Reserved.
+// Copyright (c) ggsuite
 //
 // Use of this source code is governed by terms that can be
 // found in the LICENSE file in the root of this package.
@@ -11,9 +11,7 @@ import 'package:gg_log/gg_log.dart';
 /// An example command
 class MyCommand extends Command<dynamic> {
   /// Constructor
-  MyCommand({
-    required this.ggLog,
-  }) {
+  MyCommand({required this.ggLog}) {
     _addArgs();
   }
 
