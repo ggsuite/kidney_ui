@@ -20,4 +20,4 @@ dev_dependencies:
   gg_capture_print: ^1.1.0
   test: ^1.31.1
 executables: 
-  kidney_ui: 
+  kidney_ui:
